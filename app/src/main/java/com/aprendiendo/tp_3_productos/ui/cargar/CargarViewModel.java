@@ -46,7 +46,7 @@ public class CargarViewModel extends ViewModel {
         //Valido que el codigo no este repetido
         for (Producto p : productos) {
             if (p.getCodigo().equalsIgnoreCase(codigo)){
-                mError.setValue("Dato cargado repetido");
+                mError.setValue("Código cargado repetido");
                 return;
             }
         }

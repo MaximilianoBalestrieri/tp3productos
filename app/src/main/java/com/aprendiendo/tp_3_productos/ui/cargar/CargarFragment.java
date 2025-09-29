@@ -46,6 +46,7 @@ public class CargarFragment extends Fragment {
             @Override
             public void onChanged(String s) {
                 Toast.makeText(getContext(), s, Toast.LENGTH_SHORT).show();
+                binding.twMensaje.setText("");
                 binding.etCodigo.setText("");
                 binding.etDescripcion.setText("");
                 binding.etPrecio.setText("");
