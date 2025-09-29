@@ -46,6 +46,9 @@ public class CargarFragment extends Fragment {
             @Override
             public void onChanged(String s) {
                 Toast.makeText(getContext(), s, Toast.LENGTH_SHORT).show();
+                binding.etCodigo.setText("");
+                binding.etDescripcion.setText("");
+                binding.etPrecio.setText("");
             }
         });
 
@@ -59,9 +62,7 @@ public class CargarFragment extends Fragment {
                 String descripcion = binding.etDescripcion.getText().toString();
                 String precio = binding.etPrecio.getText().toString();
                 mv.guardarProducto(codigo, descripcion, precio);
-                binding.etCodigo.setText("");
-                binding.etDescripcion.setText("");
-                binding.etPrecio.setText("");
+
 
                 // Opcional: Para que el cursor vuelva al primer campo
                 binding.etCodigo.requestFocus();
