@@ -59,6 +59,12 @@ public class CargarFragment extends Fragment {
                 String descripcion = binding.etDescripcion.getText().toString();
                 String precio = binding.etPrecio.getText().toString();
                 mv.guardarProducto(codigo, descripcion, precio);
+                binding.etCodigo.setText("");
+                binding.etDescripcion.setText("");
+                binding.etPrecio.setText("");
+
+                // Opcional: Para que el cursor vuelva al primer campo
+                binding.etCodigo.requestFocus();
             }
         });
         return root;
